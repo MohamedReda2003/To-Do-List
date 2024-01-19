@@ -84,9 +84,9 @@ class Pomodoro:
                 self.txt_number.value=str(timer)
                 await self.page.update_async()
                 if i==0:
-                    self.audio1.play_async()              
+                    await self.audio1.play_async()              
                 else:
-                    self.audio2.play_async()
+                    await self.audio2.play_async()
                     
                 i+=1
                 self.pb.value = i * (1/int(total))
